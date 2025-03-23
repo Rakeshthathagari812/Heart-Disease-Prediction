@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>❤️ HEART DISEASE PREDICTION ❤️</h2>
+        <form action="/predict" method="post">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Age:</label>
+                    <input type="number" name="age" required>
+                </div>
+                <div class="input-group">
+                    <label>Sex:</label>
+                    <select name="sex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Chest Pain Type:</label>
+                    <select name="chest_pain_type">
+                        <option value="Typical angina">Typical angina</option>
+                        <option value="Atypical angina">Atypical angina</option>
+                        <option value="Non-anginal pain">Non-anginal pain</option>
+                        <option value="Asymptomatic">Asymptomatic</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Resting Blood Pressure:</label>
+                    <input type="number" name="resting_blood_pressure" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Cholesterol:</label>
+                    <input type="number" name="cholestoral" required>
+                </div>
+                <div class="input-group">
+                    <label>Fasting Blood Sugar:</label>
+                    <select name="fasting_blood_sugar">
+                        <option value="Lower than 120 mg/ml">Lower than 120 mg/ml</option>
+                        <option value="Greater than 120 mg/ml">Greater than 120 mg/ml</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Rest ECG:</label>
+                    <select name="rest_ecg">
+                        <option value="Normal">Normal</option>
+                        <option value="ST-T wave abnormality">ST-T wave abnormality</option>
+                        <option value="Left ventricular hypertrophy">Left ventricular hypertrophy</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Max Heart Rate:</label>
+                    <input type="number" name="max_heart_rate" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Exercise Induced Angina:</label>
+                    <select name="exercise_induced_angina">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Oldpeak:</label>
+                    <input type="number" step="0.1" name="oldpeak" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Slope:</label>
+                    <select name="slope">
+                        <option value="Upsloping">Upsloping</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Downsloping">Downsloping</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Vessels Colored by Fluoroscopy:</label>
+                    <select name="vessels_colored_by_flourosopy">
+                        <option value="Zero">Zero</option>
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>
+                    </select>
+                </div>
+                
+                <div class="input-group full-width">
+                    <label>Thalassemia:</label>
+                    <select name="thalassemia">
+                        <option value="Normal">Normal</option>
+                        <option value="Fixed Defect">Fixed Defect</option>
+                        <option value="Reversable Defect">Reversable Defect</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
