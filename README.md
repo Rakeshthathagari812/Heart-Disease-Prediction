@@ -1,4 +1,4 @@
-# Heart Disease Prediction System 🫀
+# Heart Disease Prediction System 
 
 This is a Machine Learning-based web application for predicting heart disease using Flask and Scikit-Learn.
 
